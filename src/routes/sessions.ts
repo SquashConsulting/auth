@@ -1,12 +1,9 @@
 import joi from "joi";
-import createRouter from "@arangodb/foxx/router";
 
 import { AuthRequest } from "../interfaces";
 import * as SessionController from "../controllers/session";
 
-export function sessions() {
-  const router = createRouter();
-
+export default function sessions(router) {
   router
     .post("/login", (req: AuthRequest, res) => {
       const { username, password } = req.body;

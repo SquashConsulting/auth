@@ -1,6 +1,6 @@
 import sessionsMiddleware from "@arangodb/foxx/sessions";
 
-import * as routes from "./routes";
+import router from "./routes";
 import userSessionMiddleware from "./middlewares/userSession";
 
 const sessions = sessionsMiddleware({
@@ -11,5 +11,4 @@ const sessions = sessionsMiddleware({
 module.context.use(sessions);
 module.context.use(userSessionMiddleware);
 
-module.context.use(routes.hello());
-module.context.use(routes.sessions());
+module.context.use(router);

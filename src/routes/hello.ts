@@ -1,11 +1,8 @@
 import joi from "joi";
-import createRouter from "@arangodb/foxx/router";
 
 import { AuthRequest } from "../interfaces";
 
-export function hello() {
-  const router = createRouter();
-
+export default function hello(router) {
   router
     .get("/hello", (req: AuthRequest, res) => {
       if (!req.user) res.throw("unauthorized");
