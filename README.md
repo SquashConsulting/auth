@@ -34,6 +34,16 @@ yarn run upgrade:service
 
 Builds the TypeScript codebase and upgrades the current service on `/auth`
 
+## Editor configuration
+
+`yarn@berry` which is used in this project does not use `node_modules`. Because of this, some editors won't recognize imported modules. Run this command to resolve the issue in VSCode.
+
+```sh
+yarn config:editor
+```
+
+More info [here](https://next.yarnpkg.com/advanced/editor-sdks)
+
 ## License
 
 Copyright (c) 2020 Squash Consulting. All rights reserved.
