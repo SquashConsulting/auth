@@ -1,3 +1,14 @@
-import * as routes from "./routes";
+import sessionsMiddleware from "@arangodb/foxx/sessions";
 
-module.context.use(routes.hello());
+import router from "./routes";
+import userSessionMiddleware from "./middlewares/userSession";
+
+const sessions = sessionsMiddleware({
+  storage: module.context.collection("sessions"),
+  transport: "cookie"
+});
+
+module.context.use(sessions);
+module.context.use(userSessionMiddleware);
+
+module.context.use(router);

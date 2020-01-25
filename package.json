@@ -13,13 +13,10 @@
     "upgrade:service": "yarn build && foxx upgrade /auth --server squash --database squash"
   },
   "devDependencies": {
-    "@types/arangodb": "^3.4.9",
-    "@types/jest": "^24.0.9",
-    "@types/node": "^11.10.5",
-    "tslint": "^5.13.1",
-    "typescript": "^3.3.3333"
-  },
-  "dependencies": {
-    "joi": "^14.3.1"
+    "@types/arangodb": "^3.5.3",
+    "@types/node": "^13.5.0",
+    "joi": "^14.3.1",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
   }
 }
