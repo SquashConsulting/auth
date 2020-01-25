@@ -26,8 +26,8 @@ export const login = (
   password: string,
   req: AuthRequest
 ): boolean => {
-  const user = users.firstExample({ username });
-  const valid = auth.verify(user ? user.authData : {}, password);
+  const user: AuthUser = users.firstExample({ username });
+  const valid = auth.verify(user.authData, password);
 
   if (!valid) return false;
 

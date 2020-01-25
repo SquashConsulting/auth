@@ -8,7 +8,7 @@ export interface AuthUser {
   _id?: string;
   _key?: string;
   authData?: any;
-  username: string;
+  username?: string;
 }
 
 export interface AuthRequest extends Foxx.Request {
