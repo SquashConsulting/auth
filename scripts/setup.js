@@ -12,3 +12,11 @@ for (const collection of collections) {
     );
   }
 }
+
+const users = module.context.collection("users");
+
+users.ensureIndex({
+  type: "hash",
+  fields: ["username"],
+  unique: true
+});
