@@ -42,6 +42,14 @@ Builds the TypeScript codebase and upgrades the current service on `/auth`
 yarn config:editor
 ```
 
+In VSCode you also need to explicitly specify the version of TypeScript to use.
+
+1. Press `{CTRL,CMD}+SHIFT+P` in a TypeScript file
+
+1. Choose "Select TypeScript Version"
+
+1. Pick "Use Workspace Version"
+
 More info [here](https://next.yarnpkg.com/advanced/editor-sdks)
 
 ## License
