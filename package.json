@@ -1,0 +1,25 @@
+{
+  "name": "auth",
+  "version": "0.0.0",
+  "description": "Authentication service",
+  "main": "dist/entry.js",
+  "author": "Gurgen Hayrapetyan",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p .",
+    "setup": "foxx server set squash http://localhost:8529 --database squash && yarn run install:service",
+    "install:service": "yarn build && foxx install /auth --server squash --database squash",
+    "upgrade:service": "yarn build && foxx upgrade /auth --server squash --database squash"
+  },
+  "devDependencies": {
+    "@types/arangodb": "^3.4.9",
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.10.5",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "joi": "^14.3.1"
+  }
+}
