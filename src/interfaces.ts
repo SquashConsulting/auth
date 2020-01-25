@@ -12,6 +12,6 @@ export interface AuthUser {
 }
 
 export interface AuthRequest extends Foxx.Request {
-  user: ArangoDB.Document<any>;
+  user: AuthUser;
   sessionStorage: AuthSessionStorage;
 }
