@@ -17,8 +17,10 @@
     "@types/arangodb": "^3.5.3",
     "@types/node": "^13.5.0",
     "@yarnpkg/pnpify": "^2.0.0-rc.16",
-    "joi": "^14.3.1",
     "tslint": "^6.0.0",
     "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "joi": "^14.3.1"
   }
 }
