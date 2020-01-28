@@ -5,7 +5,10 @@
     "arangodb": "^3.0.0"
   },
   "scripts": {
-    "setup": "scripts/setup.js"
+    "setup": "dist/scripts/setup.js"
+  },
+  "dependencies": {
+    "shared": "shared:^0.0.0"
   },
   "name": "auth",
   "version": "0.0.0",

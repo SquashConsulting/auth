@@ -15,3 +15,7 @@ export interface AuthRequest extends Foxx.Request {
   user: AuthUser;
   sessionStorage: AuthSessionStorage;
 }
+
+export interface ICollection {
+  [key: string]: string;
+}
